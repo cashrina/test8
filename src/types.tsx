@@ -1,7 +1,9 @@
 export interface QuoteCustomer {
-    quote : {
-        author: '',
-        category: '',
-        information: '',
-    }
+    author: '',
+    category: '',
+    information: '',
+}
+
+export interface ApiQuote {
+    [id: string]: QuoteCustomer;
 }
