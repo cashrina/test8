@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const Toolbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
             <div className="container-fluid">
                 <NavLink to="/" className="navbar-brand">Quotes Central</NavLink>
                 <div className="collapse navbar-collapse">

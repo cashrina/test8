@@ -33,7 +33,7 @@ const Quotes = () => {
     return (
         <div>
             {mainQuoteList. map((quote, index) => (
-                <QuotesItem quoteInfo={quote.information} key={index}  />
+                <QuotesItem key={index} quoteInfo={quote.information} quoteId={quote.id} />
             ))}
         </div>
     );
