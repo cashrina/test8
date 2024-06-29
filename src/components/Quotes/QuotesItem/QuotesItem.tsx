@@ -22,14 +22,14 @@ const QuotesItem: React.FC<Props> = ({ quoteInfo, quoteId, onDelete }) => {
     };
 
     return (
-        <div className="card shadow-lg mb-4 border-primary-subtle border-3" style={{ width: "100%" }}>
-            <div className="card-body d-flex flex-row align-items-center justify-content-between">
-                <p className="card-text">"{quoteInfo}"</p>
-                <div>
-                    <NavLink to={`/quotes/${quoteId}/edit`} className="btn btn-primary">
+        <div className="card shadow-lg mb-4 border-primary-subtle border-3" style={{width: "100%"}}>
+            <div className="card-body d-flex flex-row justify-content-between">
+                <p className="card-text" style={{width: "70%"}}>"{quoteInfo}"</p>
+                <div className="ms-auto">
+                    <NavLink to={`/quotes/${quoteId}/edit`} className="btn btn-primary me-2">
                         Edit
                     </NavLink>
-                    <button className="btn btn-danger ms-2" onClick={deleteQuote}>
+                    <button className="btn btn-danger" onClick={deleteQuote}>
                         Delete
                     </button>
                 </div>

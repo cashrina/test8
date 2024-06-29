@@ -78,7 +78,7 @@ const Quotes = () => {
                                 className={`list-group-item ${category === cat.id ? 'active' : ''}`}
                             >
                                 <NavLink to={`/quotes/${cat.id}`}
-                                         className={category === cat.id ? 'text-danger' : 'text-dark'}>
+                                         className={category === cat.id ? 'text-light' : 'text-primary'}>
                                     {cat.title}
                                 </NavLink>
                             </li>

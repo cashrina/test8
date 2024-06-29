@@ -83,7 +83,7 @@ const NewQuote = () => {
                     value={quote.category}
                     onChange={onFieldChange}
                     required>
-                <option value="">Choose category...</option>
+                <option value="" className="fw-lighter text-secondary">Choose category...</option>
                 <option value="star-wars">Star Wars</option>
                 <option value="famous-people">Famous people</option>
                 <option value="saying">Saying</option>
