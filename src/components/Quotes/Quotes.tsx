@@ -27,13 +27,23 @@ const Quotes = () => {
     }, []);
 
     useEffect(() => {
-      void fetchQuotes();
+        void fetchQuotes();
     }, [fetchQuotes]);
+
+    const handleDeleteQuote = async (quoteId: string) => {
+        try {
+            await axiosApi.delete(`/quotes/${quoteId}.json`);
+            const updatedQuotes = mainQuoteList.filter(quote => quote.id !== quoteId);
+            setMainQuoteList(updatedQuotes);
+        } catch (error) {
+            console.error("Error deleting post:", error);
+        }
+    };
 
     return (
         <div>
-            {mainQuoteList. map((quote, index) => (
-                <QuotesItem key={index} quoteInfo={quote.information} quoteId={quote.id} />
+            {mainQuoteList.map((quote, index) => (
+                <QuotesItem key={index} quoteInfo={quote.information} quoteId={quote.id} onDelete={() => handleDeleteQuote(quote.id)} />
             ))}
         </div>
     );

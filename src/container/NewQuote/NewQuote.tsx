@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useCallback, useEffect, useState } from "react";
-import { QuoteCustomer } from "../../types.tsx";
+import {Quote, QuoteCustomer} from "../../types.tsx";
 import axiosApi from "../../axiosApi.ts";
 import { useNavigate, useParams } from "react-router-dom";
 import Spinner from "../../components/Spiner.tsx";
@@ -13,7 +13,7 @@ const QUOTE = {
 const NewQuote = () => {
     const navigate = useNavigate();
     const { id } = useParams();
-    const [quote, setQuote] = useState<QuoteCustomer>(QUOTE);
+    const [quote, setQuote] = useState<Quote>(QUOTE);
 
     const [isLoading, setIsLoading] = useState(false);
     const [isFetching, setIsFetching] = useState(false);
